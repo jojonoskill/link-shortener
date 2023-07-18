@@ -7,13 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import {initializeApp} from 'firebase/app'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBWpsDIxwZ-oF3wal3ypIyHy0vAWT7Ozw4",
-  authDomain: "link-shortener-4a1d6.firebaseapp.com",
-  projectId: "link-shortener-4a1d6",
-  storageBucket: "link-shortener-4a1d6.appspot.com",
-  messagingSenderId: "580234093106",
-  appId: "1:580234093106:web:acdabe54bd5ae3ad62122b",
-  measurementId: "G-J6LTYLMSJP"
+   //PLACE YOUR FIREBASE CONFIG HERE
 };
 
 initializeApp(firebaseConfig);
