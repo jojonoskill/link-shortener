@@ -67,7 +67,6 @@ function Form () {
       errorMessage: errorMessages,
       loading: false,
     }))
-
     if (errors.length > 0) return false;
     return true;
   }
@@ -86,11 +85,11 @@ function Form () {
     }
 
     let generatedKey = nanoid(5);
-    let generatedURL = 'NameofTheSite.com/' + generatedKey; //@TODO dont forget about site
+    let generatedURL = 'http://127.0.0.1:5000/' + generatedKey;
 
     if(formData.preferedAlias !== ''){
-      generatedKey = formData.preferedAlias;       //@TODO i dont like this method maybe some rewriting would be good
-      generatedURL = 'NameofTheSite.com/' + generatedKey; //@TODO dont forget about site
+      generatedKey = formData.preferedAlias;
+      generatedURL = 'http://127.0.0.1:5000/' + generatedKey;
     }
     const db = getDatabase();
 
@@ -156,7 +155,7 @@ function Form () {
             <label htmlFor="basic-url">Your Mini URL</label>
             <div className="input-group mb-3">
               <div className="input-group-prepend">
-                <span className="input-group-text">minilinkit.com/</span>
+                <span className="input-group-text">http://127.0.0.1:5000/</span>
               </div>
               <input
                   id="preferedAlias"
@@ -188,7 +187,7 @@ function Form () {
                   </div> :
                   <div>
                     <span className="visually-hidden spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    <span>Mini Link It</span>
+                    <span>create mini link</span>
                   </div>
             }
 
